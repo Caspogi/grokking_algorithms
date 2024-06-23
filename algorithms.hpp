@@ -1,3 +1,7 @@
 #pragma once
 
-int binarySearch(T&& conteiner, auto item);
+template<typename T>
+int binarySearch(T&& container, auto item);
+
+template<typename T>
+auto findSmallest(T&& arr);
