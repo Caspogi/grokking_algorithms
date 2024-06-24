@@ -1,6 +1,5 @@
 #include "algorithms.hpp"
 #include  <vector>
-#include <iostream>
 
 using std::vector;
 
@@ -22,9 +21,9 @@ int findSmallest(T&& arr)
 }
 
 template<typename T>
-T selectionSort(T&& arr)
+void selectionSort(T&& arr)
 {
-    T newArr(arr);
+    auto newArr = arr;
     int n = newArr.size();
     int smallest = -1;
 
@@ -34,19 +33,5 @@ T selectionSort(T&& arr)
         newArr[i] = arr[smallest];
         arr.erase((arr.begin() + smallest));
     }
-
-    return newArr;
-}
-
-int main()
-{
-    vector<int> arr{2, 5, 7, 3};
-    vector<int> sortArr(arr);
-
-    sortArr = selectionSort(arr);
-
-    for (int n : sortArr) std::cout << n << '\t';
-    std::cout << std::endl;
-
-    return 0;
+    arr = newArr;
 }
