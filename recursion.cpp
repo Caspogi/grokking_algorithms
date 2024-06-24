@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
+#include <boost/multiprecision/cpp_int.hpp>
 
 using std::cout;
 using std::string;
 using std::endl;
+
 
 void countdown(int i)
 {
@@ -32,9 +34,9 @@ void greet(string name)
     bye();
 }
 
-long long fact(int x)
+boost::multiprecision::int1024_t fact(int x)
 {
-    if (x <= 1) return 1LL;
+    if (x <= 1) return 1ull;
     return x * fact(x - 1);
 }
 

@@ -6,4 +6,4 @@ int binarySearch(T&& container, auto item);
 template<typename T>
 void selectionSort(T&& arr);
 
-long long fact(int);
+boost::multiprecision::int1024_t fact(int);
