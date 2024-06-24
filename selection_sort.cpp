@@ -1,5 +1,4 @@
 #include "algorithms.hpp"
-#include  <vector>
 
 using std::vector;
 
